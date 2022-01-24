@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C2E9919B279F5CDD00BBE3C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9919A279F5CDD00BBE3C0 /* AppDelegate.swift */; };
 		C2E9919D279F5CDD00BBE3C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9919C279F5CDD00BBE3C0 /* SceneDelegate.swift */; };
-		C2E9919F279F5CDD00BBE3C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9919E279F5CDD00BBE3C0 /* ViewController.swift */; };
 		C2E991A2279F5CDD00BBE3C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E991A0279F5CDD00BBE3C0 /* Main.storyboard */; };
 		C2E991A4279F5CDE00BBE3C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E991A3279F5CDE00BBE3C0 /* Assets.xcassets */; };
 		C2E991A7279F5CDE00BBE3C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E991A5279F5CDE00BBE3C0 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		C2E99197279F5CDD00BBE3C0 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E9919A279F5CDD00BBE3C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2E9919C279F5CDD00BBE3C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C2E9919E279F5CDD00BBE3C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C2E991A1279F5CDD00BBE3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2E991A3279F5CDE00BBE3C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E991A6279F5CDE00BBE3C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +35,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2A253E5279F60EA0079ABBA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9919A279F5CDD00BBE3C0 /* AppDelegate.swift */,
+				C2E9919C279F5CDD00BBE3C0 /* SceneDelegate.swift */,
+				C2E991A3279F5CDE00BBE3C0 /* Assets.xcassets */,
+				C2E991A5279F5CDE00BBE3C0 /* LaunchScreen.storyboard */,
+				C2E991A8279F5CDE00BBE3C0 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C2E9918E279F5CDD00BBE3C0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +66,10 @@
 		C2E99199279F5CDD00BBE3C0 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
-				C2E9919A279F5CDD00BBE3C0 /* AppDelegate.swift */,
-				C2E9919C279F5CDD00BBE3C0 /* SceneDelegate.swift */,
-				C2E9919E279F5CDD00BBE3C0 /* ViewController.swift */,
 				C2E991A0279F5CDD00BBE3C0 /* Main.storyboard */,
-				C2E991A3279F5CDE00BBE3C0 /* Assets.xcassets */,
-				C2E991A5279F5CDE00BBE3C0 /* LaunchScreen.storyboard */,
-				C2E991A8279F5CDE00BBE3C0 /* Info.plist */,
+				C2A253E5279F60EA0079ABBA /* Resources */,
 			);
-			path = AddressBook;
+			name = AddressBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E9919F279F5CDD00BBE3C0 /* ViewController.swift in Sources */,
 				C2E9919B279F5CDD00BBE3C0 /* AppDelegate.swift in Sources */,
 				C2E9919D279F5CDD00BBE3C0 /* SceneDelegate.swift in Sources */,
 			);
@@ -290,7 +294,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Info.plist;
+				INFOPLIST_FILE = AddressBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Info.plist;
+				INFOPLIST_FILE = AddressBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
