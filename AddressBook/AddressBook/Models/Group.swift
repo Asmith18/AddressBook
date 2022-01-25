@@ -2,7 +2,7 @@
 //  Group.swift
 //  AddressBook
 //
-//  Created by adam smith on 1/24/22.
+//  Created by Trevor Adcock on 10/12/21.
 //
 
 import Foundation
@@ -21,8 +21,6 @@ class Group: Codable {
 
 extension Group: Equatable {
     static func == (lhs: Group, rhs: Group) -> Bool {
-        lhs.id == rhs.id &&
-        lhs.name == rhs.name &&
-        lhs.people == rhs.people
-    }        
+        return lhs.id == rhs.id
+    }
 }
