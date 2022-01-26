@@ -6,11 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 class PersonContoller {
-    static func createPerson(name: String = "New Contact",
-                      address: String = "",
-                      group: Group) {
+    static func createPerson(name: String = "New Contact", address: String = "", group: Group) {
         let person = Person(name: name, address: address)
         group.people.append(person)
         GroupController.shared.saveContactsToDisk()
@@ -22,11 +21,14 @@ class PersonContoller {
         GroupController.shared.saveContactsToDisk()
     }
     
-    static func update(person: Person,
-                name: String,
-                address: String) {
+    static func update(person: Person, name: String, address: String) {
         person.name = name
         person.address = address
+        GroupController.shared.saveContactsToDisk()
+    }
+    
+    static func toggleIsFavorite(person: Person) {
+        person.isFavorite.toggle()
         GroupController.shared.saveContactsToDisk()
     }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EFE2A11279E19E60004A5F0 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFE2A10279E19E60004A5F0 /* PersonController.swift */; };
+		C22826FD27A0A96100BCAA96 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22826FC27A0A96100BCAA96 /* PersonTableViewCell.swift */; };
 		F7040FF22716520B00B913AC /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7040FF12716520B00B913AC /* GroupsTableViewController.swift */; };
 		F7040FF72716528200B913AC /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7040FF62716528200B913AC /* PersonDetailViewController.swift */; };
 		F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		3EFE2A10279E19E60004A5F0 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		C22826FC27A0A96100BCAA96 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		F7040FF12716520B00B913AC /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		F7040FF62716528200B913AC /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		F7FB3DE127163FDB0091D1B1 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22826FA27A0945E00BCAA96 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				F7FB3DEA27163FDB0091D1B1 /* Main.storyboard */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		C22826FB27A0A8F100BCAA96 /* custom cells */ = {
+			isa = PBXGroup;
+			children = (
+				C22826FC27A0A96100BCAA96 /* PersonTableViewCell.swift */,
+			);
+			path = "custom cells";
+			sourceTree = "<group>";
+		};
 		F7040FF32716522700B913AC /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +82,7 @@
 				F7040FF12716520B00B913AC /* GroupsTableViewController.swift */,
 				F7FB3DFF27164A4E0091D1B1 /* PeopleTableViewController.swift */,
 				F7040FF62716528200B913AC /* PersonDetailViewController.swift */,
+				C22826FB27A0A8F100BCAA96 /* custom cells */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -73,7 +92,6 @@
 			children = (
 				F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */,
 				F7FB3DE627163FDB0091D1B1 /* SceneDelegate.swift */,
-				F7FB3DEA27163FDB0091D1B1 /* Main.storyboard */,
 				F7FB3DED27163FDE0091D1B1 /* Assets.xcassets */,
 				F7FB3DEF27163FDE0091D1B1 /* LaunchScreen.storyboard */,
 				F7FB3DF227163FDE0091D1B1 /* Info.plist */,
@@ -100,6 +118,7 @@
 		F7FB3DE327163FDB0091D1B1 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				C22826FA27A0945E00BCAA96 /* views */,
 				F7040FF52716526500B913AC /* Resourses */,
 				F7FB3DFC271643B70091D1B1 /* Models */,
 				F7040FF32716522700B913AC /* ModelController */,
@@ -188,6 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22826FD27A0A96100BCAA96 /* PersonTableViewCell.swift in Sources */,
 				F7040FF22716520B00B913AC /* GroupsTableViewController.swift in Sources */,
 				3EFE2A11279E19E60004A5F0 /* PersonController.swift in Sources */,
 				F7FB3DF9271643AA0091D1B1 /* Group.swift in Sources */,

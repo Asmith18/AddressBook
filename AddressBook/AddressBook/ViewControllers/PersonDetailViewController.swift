@@ -13,6 +13,7 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     
+    
     // MARK: - Properties
     var person: Person?
     
@@ -20,6 +21,8 @@ class PersonDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateViews()
+        
+        
     }
     
     func updateViews() {
@@ -27,6 +30,7 @@ class PersonDetailViewController: UIViewController {
         nameTextField.text = person.name
         addressTextField.text = person.address
     }
+    
     
     // MARK: - IBActions
     @IBAction func saveButtonTapped(_ sender: Any) {
@@ -36,4 +40,5 @@ class PersonDetailViewController: UIViewController {
         PersonContoller.update(person: person, name: name, address: address)
         self.navigationController?.popViewController(animated: true)
     }
+    
 }
