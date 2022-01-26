@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-class PersonContoller {
+class PersonContoller: Codable {
+    
     static func createPerson(name: String = "New Contact", address: String = "", group: Group) {
         let person = Person(name: name, address: address)
         group.people.append(person)
@@ -19,6 +20,7 @@ class PersonContoller {
         guard let index = group.people.firstIndex(of: person) else { return }
         group.people.remove(at: index)
         GroupController.shared.saveContactsToDisk()
+        
     }
     
     static func update(person: Person, name: String, address: String) {

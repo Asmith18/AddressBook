@@ -30,10 +30,11 @@ class PersonTableViewCell: UITableViewCell {
 //MARK: - helper functions
     func updateViews(){
         guard let unwrappedPerson = person else {return}
+        personLabelText.text = unwrappedPerson.name
         let favoriteImageName = unwrappedPerson.isFavorite ? "star.fill" : "star"
         let favoriteImage = UIImage(systemName: favoriteImageName)
         favoriteButton.setImage(favoriteImage, for: .normal)
-        PersonContoller.toggleIsFavorite(person: unwrappedPerson)
+        
     }
     
     //MARK: - Actions

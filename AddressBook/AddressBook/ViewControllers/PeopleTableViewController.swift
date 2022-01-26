@@ -10,8 +10,18 @@ import UIKit
 class PeopleTableViewController: UITableViewController {
     
     @IBOutlet weak var groupNameTextField: UITextField!
+    @IBOutlet weak var favoriteSwitch: UISwitch!
+    
     var group: Group?
-
+    
+    private var filteredPeople: [Person] {
+        if favoriteSwitch.isOn {
+            return group?.people.filter { $0.isFavorite } ?? []
+        } else {
+            return group?.people ?? []
+        }
+    }
+    
     // MARK: - Lifecycle Methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -30,13 +40,17 @@ class PeopleTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return group?.people.count ?? 0
+        return filteredPeople.count
+        
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath)
-        let person = group?.people[indexPath.row]
-        cell.textLabel?.text = person?.name
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as? PersonTableViewCell else {return UITableViewCell()}
+        let person = filteredPeople[indexPath.row]
+        cell.person = person
+        cell.delagate = self
+        
+        
         return cell
     }
     
@@ -65,4 +79,18 @@ class PeopleTableViewController: UITableViewController {
         PersonContoller.createPerson(group: group)
         tableView.reloadData()
     }
+    @IBAction func favoriteButtonToggle(_ sender: Any) {
+        tableView.reloadData()
+    }
 }
+
+extension PeopleTableViewController: PersonTableViewCellDelagate {
+    func toggleFavoriteButtonTapped(for cell: PersonTableViewCell) {
+        guard let person = cell.person else {return}
+        PersonContoller.toggleIsFavorite(person: person)
+        tableView.reloadData()
+        
+    }
+}
+
+

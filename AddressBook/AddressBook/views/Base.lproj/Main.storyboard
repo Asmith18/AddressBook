@@ -96,6 +96,9 @@
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hwh-5B-w9g">
                                                             <rect key="frame" x="333" y="0.0" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="favoriteButtonToggle:" destination="tdF-fv-0ek" eventType="valueChanged" id="RKi-g9-xEg"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                 </stackView>
@@ -168,6 +171,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="favoriteSwitch" destination="Hwh-5B-w9g" id="sX2-cw-p7g"/>
                         <outlet property="groupNameTextField" destination="1hH-To-B4q" id="COq-XN-chX"/>
                     </connections>
                 </tableViewController>
